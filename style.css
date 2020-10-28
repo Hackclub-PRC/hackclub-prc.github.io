@@ -1,36 +1,229 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body{
+  height: 100%;
+  margin: 0px;
+  font-family: "Phantom Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--theme-ui-colors-text,#1f2d3d);
+  min-height: 100vh;
+  text-rendering: optimizelegibility;
+}
+
+
+h1,h2,h3,h4,h5,h6,ul{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* -----------------HEADER----------------- */
+header{
+  box-sizing: border-box;
+}
+
+.main-heading{
+  box-sizing: border-box;
+  font-family: cursive;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, black, transparent);
+}
+
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.flex-container ul{
+  display: flex;
+}
+
+
+.flex-container a{
+  font-size: 20px;
+  flex: 1 1 0;
+  text-decoration: none;
+  color: white;
+  width: 100px;
+}
+
+
+.logo{
+  padding: 2px;
+  border-radius: 7px;
+  height: 25px;
+  width: 25px;
+}
+
+
+.flag img{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 120px;
+  width: 180px;
+}
+
+
+/* -----------------content-header----------------- */
+
+
+#bgimg{
+  box-sizing: border-box;
+  background-image: url(/img/providence.jpg);
+  height: 770px;
+  filter: brightness(80%);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* -----------------content-header----------------- */
+
+
+#header-content{
+  padding: 60px;
+  box-sizing: border-box;
+  -webkit-text-stroke: 1px black;
+  font-family: "Phantom Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media screen and (max-width: 750px){
+  #header-content{
+    padding: 0px;
+    font-size: 30px;
+    top: 25%;
   }
+
+  #bgimg{
+    height: 400px;
+  }
+
+  .flag img{
+    top: 40px;
+    height: 60px;
+    width: 90px;
+  }
+
+  .main-heading{
+    padding: 5px;
+  }
+
+}
+
+.social-icons{
+  padding-top: 10px;
+  text-align: center;
+ }  
+
+
+.social-icons li{
+  display:inline-block;
+  list-style-type:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+}
+
+
+.social-icons li a{
+  border-bottom: none;
+}
+
+
+.social-icons li img {
+  width:30px;
+  height:30px;
+  margin-right: 20px;
+}
+
+
+/* -----------------Welcome----------------- */
+
+
+.welcome{
+  text-align: center;
+  background: gray;
+  padding: 10px;
+  color: aliceblue;
+  font-family: cursive ;
+}
+
+
+@media screen and (max-width: 750px){
+
+  .welcome{
+    padding: 5px;
+  }
+
+}
+
+/* -----------------MAIN----------------- */
+
+
+main{
+  max-width: 100%;
+  width: 1000px;
+  margin: 40px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 2em;
+}
+
+/* .about{
   
-  .bgimg {
-    background-image: url('providence.jpg');
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: #ebe3cc;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 50px;
-  }
+}
+
+.events{
   
-  .topleft {
-    position: absolute;
-    top: 0;
-    left: 16px;
-  }
+} */
+
+section p{
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+
+/* -----------------FOOTER----------------- */
+
+
+footer{
+  margin-top: 20px;
+  background: #ddd;
+  padding: 10px;
   
-  .bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-    font-size: 20px;
-  }
+}
+footer ul{
+  margin: 0;
+}
+footer p{
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+footer nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
   
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+}
+footer nav li{
+  margin: 0px 20px;
+  cursor: pointer;
+}
